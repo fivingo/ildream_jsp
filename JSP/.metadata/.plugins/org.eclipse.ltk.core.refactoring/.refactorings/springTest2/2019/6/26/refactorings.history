@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;yong.hello&apos; to &apos;listo.hello&apos;&#x0D;&#x0A;- Original project: &apos;springTest2&apos;&#x0D;&#x0A;- Original element: &apos;springTest2/src/yong.hello&apos;&#x0D;&#x0A;- Renamed element: &apos;springTest2/src/listo.hello&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;yong.hello&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;yong.hello" name="listo.hello" qualified="false" references="true" stamp="1561381573990" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body {
+	width: 680px;
+	margin: 0px auto;
+}
+header {
+	width: 680px;
+}
+header div {	/* 자손선택자 선택 (공백) */
+	text-align: right;
+	font-size: 15px;
+}
+header h1 {
+	text-align: center;
+	font-size: 50px;
+	color: skyblue;
+	text-shadow: 5px 5px 5px darkblue;
+}
+header nav {
+	background: skyblue;
+	border-top: 3px double darkblue;
+	border-bottom: 3px double darkblue;
+}
+header li {
+	list-style-type: none;
+	display: inline;
+	margin-left: 50px;
+}
+section {
+	width: 680px;
+}
+#mainImg {	/* id 선택자 */
+	width: 300px;
+	float: left;	/* 왼쪽으로 위치지정 */
+}
+#mainImg img {
+	width: 300px;
+}
+#mainMenu {
+	float: left;
+}
+footer {
+	width: 680px;
+	clear: both;
+}
+footer div {
+	text-align: center;
+}

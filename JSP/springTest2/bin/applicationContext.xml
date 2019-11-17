@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 설정파일에서 객체생성과 수정: 설정파일은 컴파일을 하지않으므로 직접적인 수정은 아니다 -->
+	<!-- bean 객체 생성 -->
+	<bean id="messageBean" class="listo.hello.MessageBeanImple">
+		<!-- 생성자 주입 방식 -->
+		<constructor-arg>
+			<!-- 생성자 인자값 설정: String타입 -->
+			<value>스프링아</value>
+		</constructor-arg>
+		<!-- 세터 주입 방식: 변수 지정 -->
+		<property name="greeting">
+			<!-- setter값 설정: Stirng타입 -->
+			<value>안녕하세요!</value>
+		</property>
+		<!-- 세터 주입 방식: 변수 지정 -->
+		<property name="output">
+			<!-- setter값 설정: reference타입 -->
+			<ref bean="dbMsgOutput"></ref>
+		</property>
+	</bean>
+	<!-- bean 객체 생성 -->
+	<bean id="dbMsgOutput" class="listo.hello.DbMsgOutput">
+		<!-- DB설정부분 -->
+	</bean>
+	<bean id="fileMsgOutput" class="listo.hello.FileMsgOutput">
+		<property name="filename">
+			<value>out.txt</value>
+		</property>
+	</bean>
+</beans>

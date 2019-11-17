@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.jst.jsp.ui.internal.preferences.ui.JSPTemplatePreferencePage$JSPEditTemplateDialog_dialogBounds">
+		<item value="1936" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="1056" key="DIALOG_HEIGHT"/>
+		<item value="-195" key="DIALOG_X_ORIGIN"/>
+		<item value="-14" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="8080" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="8080"/>
+			<item value="20000"/>
+			<item value="age"/>
+			<item value="name"/>
+			<item value="&apos;"/>
+			<item value="yong"/>
+			<item value="listodb"/>
+			<item value="삭제"/>
+			<item value="네놈"/>
+			<item value="답"/>
+			<item value="ekq"/>
+			<item value="update"/>
+			<item value="추천"/>
+			<item value="검색"/>
+			<item value="답글"/>
+		</list>
+		<list key="replacehistory">
+			<item value="&quot;age&quot;"/>
+			<item value="&quot;name&quot;"/>
+			<item value="&quot;"/>
+			<item value="listo"/>
+			<item value="ListoDb"/>
+			<item value="The superclass &quot;javax.servlet.http.HttpServlet&quot; was not "/>
+			<item value=""/>
+			<item value="/"/>
+			<item value="mjoinDate"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="288" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="1153" key="DIALOG_X_ORIGIN"/>
+		<item value="352" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

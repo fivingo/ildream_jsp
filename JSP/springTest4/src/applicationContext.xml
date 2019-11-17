@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<bean id="yongTimerAOP" class="yong.aop.YongTimerAOP"/>
+	<!-- aop 설정 -->
+	<aop:config>
+		<!-- aspect: Advice와 PointCut의 결합 -->
+		<aop:aspect id="timeAOP" ref="yongTimerAOP">
+			<!-- potintcut: Aspect를 적용하는 대상 선정 방법 혹은 위치 정의 -->
+			<!-- 표현식 - [리턴타입][패키지경로.클래스명.메서드명 및 매개변수] -->
+			<aop:pointcut expression="execution(* yong.gugu.*.gugu*(..))" id="gugu"/>
+			<!-- around: 핵심로직의 전후에 pointcut삽입 - Advice 동작시점 지정 -->
+			<aop:around method="yongTime" pointcut-ref="gugu"/>
+		</aop:aspect>
+	</aop:config>
+	
+	<bean id="guguBean2" class="yong.gugu.GuguBeanImple2"/>
+	<bean id="guguBean3" class="yong.gugu.GuguBeanImple3"/>
+</beans>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;myweb4/WebContent/getStudentsJASON.jsp&apos; to &apos;getStudentsJSON.jsp&apos;" description="Rename resource &apos;getStudentsJASON.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/getStudentsJASON.jsp" name="getStudentsJSON.jsp" stamp="1573897368963" updateReferences="true"/>
+</session>

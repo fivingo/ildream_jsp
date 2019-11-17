@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>scopeTest</title>
+</head>
+<body>
+<h1>scopeTest.html</h1>
+<!-- 
+Scope: 자바빈 객체를 저장할 영역을 지정.
+- page(default): 하나의 JSP 페이지(현재 페이지) 내에서만 객체 공유
+- request: 한 번의 웹 브라우저(클라이언트)의 요청에 대해 같은 요청을 공유하는 페이지내에서 객체 공유
+		(페이지간의 연결시 한번만 데이터유지)
+- session: 같은 브라우저 내에서 요청되는 페이지는 같은 객체 공유
+		(웹브라우저를 닫을 동안 혹은 세션이 종료될때까지 유지)
+- application: 같은 애플리케이션 내에서 요청되는 페이지들은 같은 객체를 공유
+		(서버가 종료될때까지 데이터 유지)
+ -->
+<form name="fm" action="scopeTest.jsp">
+숫자 입력: <input type="text" name="count">
+<input type="submit" value="전달">
+</form>
+</body>
+</html>

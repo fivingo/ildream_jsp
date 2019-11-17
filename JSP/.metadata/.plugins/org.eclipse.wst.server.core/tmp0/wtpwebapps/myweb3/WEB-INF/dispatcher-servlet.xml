@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- controllers -->
+	<bean id="helloController" class="yong.controller.HelloController"/>
+	<bean id="indexController" class="yong.controller.IndexController"/>
+	<bean id="memoController" class="yong.controller.MemoController"/>
+	<bean id="memberController" class="yong.controller.MemberController"/>
+	<bean id="orderController" class="yong.controller.OrderController"/>
+	<bean id="paramTestController" class="yong.controller.ParamTestController"/>
+	<bean id="cookieController" class="yong.controller.CookieController"/>
+	<bean id="loginController" class="yong.controller.LoginController"/>
+	<bean id="viewTestController" class="yong.controller.ViewTestController"/>
+	<bean id="modelTestController" class="yong.controller.ModelTestController"/>
+	<bean id="animeController" class="yong.controller.AnimeController"/>
+	<bean id="fileController" class="yong.controller.FileController"/>
+	<bean id="webFolderController" class="yong.controller.WebFolderController"/>
+	<bean id="empController" class="yong.controller.EmpController"/>
+	
+	<!-- configs -->
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="1048576"/>
+	</bean>
+	
+	<!-- MyBatis configs -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@192.168.1.3:1521:orcl"/>
+		<property name="username" value="java12"/>
+		<property name="password" value="java12"/>
+	</bean>
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="configLocation" value="classpath:/mybatis-config.xml"></property>
+	</bean>
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactoryBean"/>
+	</bean>
+	
+	<!-- services -->
+	<bean id="memoDao" class="yong.memo.model.MemoDAOImple"/>
+	<bean id="memberDao" class="yong.member.model.MemberDAOImple"/>
+	<bean id="empDao" class="yong.emp.model.EmpDAOImple">
+		<constructor-arg>
+			<ref bean="sqlSessionTemplate"/>
+		</constructor-arg>
+	</bean>
+	
+	<!-- view -->
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		<property name="order" value="0"/>
+	</bean>
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"/>
+		<property name="suffix" value=".jsp"/>
+		<property name="order" value="1"/>
+	</bean>
+	<bean id="yongDown" class="yong.view.DownloadView"/>
+</beans>

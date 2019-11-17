@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="springTest1"/>
+<aop-project name="springTest2"/>
+<aop-project name="springTest3">
+<aspect-definition advice-class-name="yong.aop.YongTimerAOP" advice-method-name="yongTime" advice-type="AROUND" aspect-end-line-number="19" aspect-name="yongTimerAOP" aspect-start-line-number="19" factory-id="org.springframework.ide.eclipse.aop.core.beanAspectDefinitionElementFactory" file="/springTest3/src/applicationContext.xml" pointcut-expression="execution(* yong.hello.*.say*(..))" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:springTest3|3:src/applicationContext.xml|7:beans:8|8:messageBean:23" bean-file="/springTest3/src/applicationContext.xml" bean-start-line="23" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/springTest3/src/applicationContext.xml" source="=springTest3/src&lt;yong.aop{YongTimerAOP.java[YongTimerAOP~yongTime~QProceedingJoinPoint;" source-start-line="7" target="=springTest3/src&lt;yong.hello{MessageBeanImple.java[MessageBeanImple~sayHello" target-start-line="23"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="springTest4">
+<aspect-definition advice-class-name="yong.aop.YongTimerAOP" advice-method-name="yongTime" advice-type="AROUND" aspect-end-line-number="19" aspect-name="yongTimerAOP" aspect-start-line-number="19" factory-id="org.springframework.ide.eclipse.aop.core.beanAspectDefinitionElementFactory" file="/springTest4/src/applicationContext.xml" pointcut-expression="execution(* yong.gugu.*.gugu*(..))" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:springTest4|3:src/applicationContext.xml|7:beans:8|8:guguBean2:23" bean-file="/springTest4/src/applicationContext.xml" bean-start-line="23" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/springTest4/src/applicationContext.xml" source="=springTest4/src&lt;yong.aop{YongTimerAOP.java[YongTimerAOP~yongTime~QProceedingJoinPoint;" source-start-line="7" target="=springTest4/src&lt;yong.gugu{GuguBeanImple2.java[GuguBeanImple2~gugu" target-start-line="8"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:springTest4|3:src/applicationContext.xml|7:beans:8|8:guguBean3:24" bean-file="/springTest4/src/applicationContext.xml" bean-start-line="24" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/springTest4/src/applicationContext.xml" source="=springTest4/src&lt;yong.aop{YongTimerAOP.java[YongTimerAOP~yongTime~QProceedingJoinPoint;" source-start-line="7" target="=springTest4/src&lt;yong.gugu{GuguBeanImple3.java[GuguBeanImple3~gugu" target-start-line="8"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="myweb3"/>
+</aop-reference-model>

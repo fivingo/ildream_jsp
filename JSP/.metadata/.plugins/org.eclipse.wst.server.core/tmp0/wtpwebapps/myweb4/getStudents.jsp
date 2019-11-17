@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/xml; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<students>
+	<student>
+		<name>홍길동</name>
+		<age>20</age>
+		<addr>서울</addr>		
+	</student>
+	<student>
+		<name>둘리</name>	
+		<age>30</age>
+		<addr>부천</addr>
+	</student>
+	<student>
+		<name>하니</name>
+		<age>40</age>
+		<addr>부산</addr>
+	</student>
+</students>

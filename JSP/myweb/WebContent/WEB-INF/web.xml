@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
+id="WebApp_ID" version="3.1">
+  <display-name>myweb</display-name>
+  <!-- 기본페이지 (추가된 페이지 없을시 로드) -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- HelloServlet -->
+  <servlet>
+  	<!-- 서블릿을 담기위한 변수 설정 -->
+    <servlet-name>hi</servlet-name>
+    <!--  서블릿 클래스 파일 호출 -->
+    <servlet-class>listo.servlet.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<!-- 매핑한 서블릿 변수 호출 -->
+    <servlet-name>hi</servlet-name>
+    <!-- 매핑할 서블릿의 url방식 설정 -->
+    <url-pattern>/hiServlet</url-pattern>
+  </servlet-mapping>
+  <!-- GuguServlet -->
+  <servlet>
+    <servlet-name>gugu</servlet-name>
+    <servlet-class>listo.servlet.GuguServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>gugu</servlet-name>
+    <url-pattern>/guguServlet</url-pattern>
+  </servlet-mapping>
+  <!-- ServletLifeCycle -->
+  <servlet>
+    <servlet-name>slc</servlet-name>
+    <servlet-class>listo.servlet.ServletLifeCycle</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>slc</servlet-name>
+    <url-pattern>/slc</url-pattern>
+  </servlet-mapping>
+  <!-- ExamServlet -->
+  <servlet>
+    <servlet-name>exam</servlet-name>
+    <servlet-class>listo.servlet.ExamServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>exam</servlet-name>
+    <url-pattern>/ExamServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

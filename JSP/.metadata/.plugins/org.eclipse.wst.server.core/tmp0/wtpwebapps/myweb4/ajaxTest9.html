@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function() {
+		/*
+		window.alert('Dom API Test~');
+		
+		var rootNode=document.documentElement;
+		window.alert('rootNode:'+rootNode.nodeName);
+		
+		var bodyNode=rootNode.lastChild;
+		window.alert('bodyNode:'+bodyNode.nodeName)
+		
+		var span1Node=bodyNode.firstChild.nextSibling;
+		window.alert('span1Node:'+span1Node.nodeName)
+		//개행을 텍스트노드로 인식함
+		
+		var span1Value=span1Node.firstChild.nodeValue;
+		window.alert('span1Value:'+span1Value);
+		
+		var bodyChildNodes=bodyNode.childNodes;
+		window.alert('body노드의 자식의 수 : '+bodyChildNodes.length);
+		
+		for(var i=0; i<bodyChildNodes.length; i++){
+			var testNode=bodyChildNodes.item(i);
+			window.alert(testNode.nodeName);
+		}
+		
+		var rootNode=document.documentElement;
+		var spanBNode=rootNode.lastChild.firstChild.nextSibling.nextSibling.nextSibling.lastChild.previousSibling.firstChild;
+		window.alert(spanBNode.nodeValue);
+		*/
+
+		var span2node = document.getElementById('b');
+		//document.all.b
+		var span2Text = span2node.lastChild;
+		window.alert('span2Text=' + span2Text.nodeValue);
+
+		var spanNodes = document.getElementsByTagName('span');
+		for (var i = 0; i < spanNodes.length; i++) {
+			var tempSpan = spanNodes.item(i);
+			window.alert(tempSpan.firstChild.nodeValue);
+		}
+	}
+</script>
+</head>
+<body>
+	<span id="a">a</span>
+	<p>text <span id="b">b</span></p>
+	<div><p>p</p><span id="c">c</span></div>
+</body>
+</html>
